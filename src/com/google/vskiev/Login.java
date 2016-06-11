@@ -40,6 +40,7 @@ public Login()
         {
             RequestDispatcher disp = req.getRequestDispatcher("/JSP/result.jsp");
             disp.forward(req,resp);
+
         }
            RequestDispatcher disp = req.getRequestDispatcher("/index.jsp");
            disp.forward(req,resp);
