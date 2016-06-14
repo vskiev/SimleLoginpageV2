@@ -3,6 +3,7 @@ package com.google.vskiev;
 import com.google.vskiev.db.LoginValidator;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,12 +39,15 @@ public Login()
 
         if (new LoginValidator().checkUserName(login,password))
         {
+
             RequestDispatcher disp = req.getRequestDispatcher("/JSP/result.jsp");
             disp.forward(req,resp);
+
 
         }
            RequestDispatcher disp = req.getRequestDispatcher("/index.jsp");
            disp.forward(req,resp);
+
         }
 
 }
